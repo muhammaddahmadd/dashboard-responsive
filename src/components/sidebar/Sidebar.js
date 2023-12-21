@@ -10,11 +10,11 @@ export default function Sidebar() {
     <div className={`sidebar bg-primary  ${isOpen ? "" : "close"}`}>
       {/* Logo, navigation links, profile details, etc. */}
       <button
-        className="bx bx-menu "
+        className="bx bx-menu text-sm"
         onClick={toggleSidebar}
-        style={{ textSize: "10px" }}
+        // style={{ textSize: "10px" }}
       >
-        btn
+        &#9776;
       </button>
     </div>
   );

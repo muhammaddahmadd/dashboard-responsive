@@ -224,7 +224,7 @@
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
   color: #11101d;
-  font-size: 35px;
+  font-size: 20px;
 }
 
 .home-section .home-content .bx-menu {
@@ -244,15 +244,18 @@
 }
 
 .bx-menu {
-  color: #fff;
-  font-size: 35px;
-  margin: 0 15px;
+  color: none;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 15px;
   cursor: pointer;
+  border: none;
+  background: white;
   transition: color 0.3s ease-in-out;
 }
 
 .bx-menu:hover {
-  color: #d7d7d7;
+  color: gray;
 }
 
 .home-section.active .bx-menu {
