@@ -1,0 +1,49 @@
+/* StripedColumnsExample.css */
+
+.container-fluid {
+  padding: 20px;
+}
+
+.table-wrapper {
+  width: 1000px;
+  margin: auto;
+}
+
+.table-header-cell {
+  text-align: start;
+}
+
+.august-cell {
+  background: grey;
+  max-width: 50%;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+.august-cell::after {
+  display: block;
+  width: 0;
+  content: "";
+  border: 15px solid transparent;
+  border-left-color: grey;
+  border-right: 0;
+  position: absolute;
+  right: -10px;
+  top: calc(50% - 15px);
+}
+
+.september-cell::after {
+  content: ""; /* Add empty content for the ::after pseudo-element */
+}
+
+.october-cell::after {
+  display: block;
+  width: 0;
+  content: "";
+  border: 15px solid transparent;
+  border-right-color: green;
+  border-left: 0;
+  position: absolute;
+  left: -10px;
+  top: calc(50% - 15px);
+}
