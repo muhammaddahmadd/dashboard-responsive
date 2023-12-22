@@ -8,7 +8,7 @@ export default function Main() {
     background: "rgb(255, 255, 255)",
   };
   return (
-    <div className="home-section ">
+    <div className="home-section  ">
       {/* <div className="home-content"> */}
       {/* <span className="text">TImebee</span> */}
       {/* </div> */}
@@ -16,7 +16,7 @@ export default function Main() {
       <div className="mx-5">
         <User />
       </div>
-      <div style={style} className="mx-5 rounded-2  h-50 ">
+      <div style={style} className="mx-5 rounded-2 pt-4 h-50 ">
         <Container />
 
         <Table />
