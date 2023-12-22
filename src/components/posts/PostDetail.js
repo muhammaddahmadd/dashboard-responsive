@@ -1,14 +1,13 @@
 // PostDetails.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useApi } from "./ApiContext";
-import { useEffect } from "react";
+import Spinner from "../ui/Spinner";
 
 const PostDetails = () => {
   const { fetchData, loading, error } = useApi();
   const { id } = useParams();
   const [post, setPost] = useState(null);
-  //   const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchPostDetails = async () => {
@@ -26,16 +25,22 @@ const PostDetails = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="container mt-4">
       {loading ? (
-        <p>Loading...</p>
+        <Spinner />
       ) : error ? (
-        <p>Error: {error}</p>
+        <div className="alert alert-danger" role="alert">
+          Error: {error}
+        </div>
       ) : post ? (
-        <div>
-          <h2>ID: {post.id}</h2>
-          <h3>Title: {post.title}</h3>
-          <p>Body: {post.body}</p>
+        <div className="card">
+          <div className="card-header">
+            <h2>ID: {post.id}</h2>
+          </div>
+          <div className="card-body">
+            <h3 className="card-title">Title: {post.title}</h3>
+            <p className="card-text">Body: {post.body}</p>
+          </div>
         </div>
       ) : (
         <p>No data found</p>
